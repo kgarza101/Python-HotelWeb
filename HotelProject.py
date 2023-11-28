@@ -105,7 +105,7 @@ def confirm_payment():
     if card_number.isdigit():  # Checks if the input is a number
         return render_template('confirm_payment.html')
     else:
-        return 'Invalid card number. Please enter a valid number.', 400
+        return render_template('invalid_payment.html')
 
 
 @app.route('/logout')
